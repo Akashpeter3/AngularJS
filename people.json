@@ -1,0 +1,16 @@
+{
+	"records": [{
+			"Name": "Akash",
+			"Age": "24"
+		},
+		{
+			"Name": "Manu",
+			"Age": "26"
+		},
+		{
+			"Name": "Shoukath",
+			"Age": "27"
+		}
+
+	]
+}

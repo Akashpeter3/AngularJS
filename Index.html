@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular JS</title>
+  </head>
+  <body ng-app="myApp">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <p ng-repeat="number in numbers">{{number}} </p>
+    <div ng-controller ="MyController">
+  <!-- <p ng-hide ="isSpy">{{name}}</p>  <br>
+  <p ng-hide ="isSpy">{{age}}</p>  <br>
+  <p ng-hide ="isSpy">{{NameAndAge()}}</p>
+    <p ng-show ="isSpy">CodeName is {{codename}}</p> -->
+    <button ng-click ="count=count+1;toggleshow()">Click</button>
+        <p ng-hide ="show">Count is {{count}}</p>
+    </div>
+  </body>
+</html>

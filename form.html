@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Form</title>
+    <style type="text/css">
+      .ng-invalid.ng-dirty{
+        border-color:red;
+      }
+      .ng-valid.ng-dirty{
+        border-color:green;
+      }
+      input,textarea{
+        border: 2px solid;
+      }
+    </style>
+  </head>
+  <body ng-app="myApp">
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src ="form.js"></script>
+    <script type="text/javascript" src ="review.js">
+
+    </script>
+    <div ng-controller="MyController">
+      <h2>Reviews </h2>
+      <div ng-repeat="review in reviews">
+           <div style ="background-color: #EEEEEE">
+             <p>{{review.comment}}</p>
+             <p><b>{{review.by}}</b></p>
+           </div>
+      </div>
+     <form name ="reviewForm" ng-submit =" reviewForm.$valid && addReview()"novalidate>
+      <p>{{form.comment}}</p><br>
+      <p>{{form.by}}</p>
+
+      <label>Comment</label> <br>
+      <textarea ng-model ="form.comment" required></textarea> <br>
+      <label>Author</label><br>
+      <input ng-model ="form.by" type="email" required><br>
+      <input type="submit"  value="Add review">
+      <p>Form Valid? {{reviewForm.$valid}}</p>
+       <div userinformation><div>
+      </div>
+    </form>
+    </div>
+  </body>
+</html>

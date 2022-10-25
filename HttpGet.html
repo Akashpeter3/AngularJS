@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body ng-app ="myApp">
+    <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script  type="text/javascript" src ="controller.js"></script>
+    <div>
+        <div ng-controller="people">
+    <ul>
+      {{persons}}
+      <h2> Names and ages of programmers </h2>
+   <li ng-repeat = "person in persons">
+     {{person.Name+' '+person.Age}}
+   </li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Filter Angular</title>
+  </head>
+  <body ng-app="myApp">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  <div ng-controller="MyController">
+    <div ng-repeat ="employee in employees | limitTo:2|orderBy :'-salary'">
+     <p>FirstName is {{employee.fname |uppercase| limitTo:3}}</p>
+     <p>LastName is {{employee.lname | lowercase}}</p>
+     <p>Salary is {{employee.salary | currency}}</p>
+
+    </div>
+  </div>
+
+    </div>
+  </body>
+</html>
